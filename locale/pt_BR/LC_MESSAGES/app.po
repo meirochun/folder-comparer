@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Folder Comparator"
+msgstr "Comparador de pastas"
+
+msgid "Select Folder 1"
+msgstr "Selecionar pasta 1"
+
+msgid "Select Folder 2"
+msgstr "Selecionar pasta 2"
+
+msgid "Compare Folders"
+msgstr "Comparar pastas"
+
+msgid "Please select both folders."
+msgstr "Por favor, selecione ambas as pastas."
+
+msgid "Differences"
+msgstr "Diferenças"
+
+msgid "Different file: {file}"
+msgstr "Arquivo diferente: {file}"
+
+msgid "File only in {folder}: {file}"
+msgstr "Arquivo apenas em {folder}: {file}"
+
+msgid "Folders are identical."
+msgstr "As pastas são idênticas."
