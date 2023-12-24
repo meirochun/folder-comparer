@@ -15,8 +15,8 @@ It's actually very simple.
 
 You select your folder 1 and folder 2. Then press compare folders.
 
-![Example 1](https://prnt.sc/svkYtcVkxzoE "Example 1")
+![Example 1](sample-images/example1.png "Example 1")
 
 The differences should open a new little window telling you where that specific folder/file is in each folder that you selected.
 
-![Differences example](https://prnt.sc/XYiw7eYlF52K "Differences example")
+![Differences example](sample-images/example2.png "Differences example")
