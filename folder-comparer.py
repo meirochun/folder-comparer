@@ -25,8 +25,7 @@ class FolderComparator:
 
         # Language dropdown
         self.language_label = ttk.Label(root, text=_("Language:"))
-        self.language_dropdown = ttk.Combobox(root, textvariable=self.selected_language values=["en_US", "pt_BR"])
-        # self.language_dropdown = ttk.Combobox(root, textvariable=self.selected_language, values=["English", "Português"])
+        self.language_dropdown = ttk.Combobox(root, textvariable=self.selected_language, values=["English", "Português"])
         self.language_dropdown.bind("<<ComboboxSelected>>", self.change_language)
 
         self.compare_button = ttk.Button(root, text=_("Compare Folders"), command=self.compare_folders)
@@ -94,10 +93,16 @@ class FolderComparator:
     def change_language(self, event):
         lang = self.selected_language.get()
         os.environ['LANG'] = lang.lower().replace(" ", "_")
-        self.refresh_ui()
+        self.refresh_ui(lang)
 
-    def refresh_ui(self):
-        translation = gettext.translation("app", localedir="locale", languages=[os.environ['LANG']])
+    def refresh_ui(self, lang):
+        match lang:
+            case "Português":
+                selected_language = 'pt_BR'
+            case "English":
+                selected_language = 'en_US'
+
+        translation = gettext.translation("app", localedir="locale", languages=[selected_language])
         translation.install()
         _ = translation.gettext
 
@@ -111,7 +116,7 @@ class FolderComparator:
         
 
 if __name__ == "__main__":
-    translation = gettext.translation("app", localedir="locale", languages=['pt_BR'])
+    translation = gettext.translation("app", localedir="locale", languages=['en_US', 'pt_BR'])
     translation.install()
     _ = translation.gettext
     
