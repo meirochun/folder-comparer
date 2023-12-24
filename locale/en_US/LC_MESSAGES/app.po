@@ -28,3 +28,6 @@ msgstr "File only in {folder}: {file}"
 
 msgid "Folders are identical."
 msgstr "Folders are identical."
+
+msgid "Language:"
+msgstr "Language:"
